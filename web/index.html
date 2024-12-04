@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"></link>
-    <link rel="icon" type="image/jpeg" href="../image/hustico.jpeg" sizes="32x32">
+    <link rel="icon" type="image/jpg" href="../image/liverpool.jpg" sizes="32x32">
     <title>Liverpool FC</title>
     <header>
         <nav>
@@ -12,7 +12,7 @@
                 <li><a href="#backtoclass" class="lighttext">back</a></li>
                 <li><a href="#" class="lighttext">Home</a></li>
                 <li>
-                    <a href="history.html" class="lighttext">Club History</a>
+                    <a href="history.html" class="lighttext" target="_blank">Club History</a>
                 </li>
                 <li><a href="squad.html" class="lighttext">Squad</a></li>
                 <li><a href="fixture.html" class="lighttext">Fixtures&Results</a></li>
@@ -25,9 +25,26 @@
 </head>
 <body>
     <div class="background"></div>
+    <iframe src="https://matchcentre.liverpoolfc.com/#/" frameborder="0"></iframe>
     <script>
         const slider = document.querySelector('.background');
         slider.style.backgroundImage = 'url(../image/Liv.jpeg)';
+        // 获取 iframe 元素
+        var iframe = document.querySelector('iframe');
+
+        // 等待 iframe 内容加载完成
+        iframe.onload = function() {
+            // 获取 iframe 的文档对象
+            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+            // 假设您要滚动到的元素ID为 'targetElement'
+            var targetElement = iframeDocument.getElementById('tabs-nav');
+
+            // 如果找到了目标元素，将其滚动到视图中
+            if (targetElement) {
+                targetElement.scrollIntoView(true);
+            }
+        };
     </script>
 </body>
 </html>

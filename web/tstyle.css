@@ -1,0 +1,45 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+.timeline-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.year {
+    position: sticky;
+    top: 0;
+    background: #f4f4f4;
+    padding: 4px 8px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.timeline-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.timeline-content img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* 确保年份标签在内容上方 */
+.timeline-content:last-child .year {
+    position: absolute;
+    bottom: 100%;
+}
