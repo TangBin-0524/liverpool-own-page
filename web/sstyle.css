@@ -1,0 +1,121 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* 确保背景在内容之下 */
+    background-size: cover;
+    background-position: center;
+}
+
+
+.default-image,
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 20%;
+    transition: opacity 0.3s ease;
+}
+
+.default-image {
+    opacity: 1;
+}
+
+.hover-image {
+    opacity: 0;
+}
+
+.image-container:hover .hover-image {
+    opacity: 1;
+}
+
+.image-container:hover .default-image {
+    opacity: 0;
+}
+
+.image-container p{
+    color:yellow;
+}
+.image-container h2{
+    color:aqua;
+}
+.image-container > #GK {
+    position:absolute;
+    top: 5%;
+    left: 45%;
+    width: 10%;
+    height: 20%;
+}
+.image-container > #RB {
+    position:absolute;
+    top: 25%;
+    left: 25%;
+    width: 10%;
+    height: 20%;
+}
+.image-container > #CB1 {
+    position:absolute;
+    top: 25%;
+    left: 38%;
+    width: 10%;
+    height: 20%;
+}
+.image-container > #CB2 {
+    position:absolute;
+    top: 25%;
+    left: 53%;
+    width: 10%;
+    height: 20%;
+}
+.image-container > #LB {
+    position:absolute;
+    top: 25%;
+    left: 70%;
+    width: 10%;
+    height: 20%;
+}
+.image-container > #DMF1 {
+    position:absolute;
+    top: 45%;
+    left: 33%;
+    width: 10%;
+    height: 20%;
+}
+.image-container > #DMF2 {
+    position:absolute;
+    top: 45%;
+    left: 63%;
+    width: 10%;
+    height: 20%;
+}
+.image-container > #RWF {
+    position:absolute;
+    top: 75%;
+    left: 30%;
+    width: 10%;
+    height: 20%;
+}
+.image-container > #LWF {
+    position:absolute;
+    top: 75%;
+    left: 60%;
+    width: 10%;
+    height: 20%;
+}
+.image-container > #CF {
+    position:absolute;
+    top: 75%;
+    left: 45%;
+    width: 10%;
+    height: 20%;
+}
+.image-container > #AMF {
+    position:absolute;
+    top: 55%;
+    left: 45%;
+    width: 10%;
+    height: 20%;
+}

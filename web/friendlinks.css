@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+.background {
+    position: fixed; /* 或 absolute，取决于你的需求 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* 确保背景在内容之下 */
+    background-size: cover;
+    background-position: center;
+}
+
+.lighttext {
+    font-family:'Courier New', Courier, monospace ;
+    font-style: initial;
+    /*
+    position: absolutely;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    margin: 0;
+    padding: 0 20px;
+    font-size: 40px;
+    color: #0e0005;
+    color: #fff;
+    /* 先在文字周围生成集中度较高的阴影效果*/
+    text-shadow: 0 0 20px #5100ff;
+}
+p.lighttext {
+    font-family:'Courier New', Courier, monospace ;
+    font-style: initial;
+    /*
+    position: absolutely;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    margin: 0;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #0e0005;
+    color: #fff;
+    /* 先在文字周围生成集中度较高的阴影效果*/
+    text-shadow: 0 0 10px #5100ff;
+}
+
+.lighttext::after {
+    /* 
+          CSS表达式 attr() 
+              1. 用来获取选择到的元素的某一HTML属性值，并用于其样式。
+              2. 也可以用于伪元素，属性值采用伪元素依赖的元素
+          ref: [attr - CSS（层叠样式表） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/attr())
+          注意：attr()通常只用于CSS content属性，虽然理论上可以用于任何CSS属性
+  
+          这里是获取h1的data-text属性值，虽然完全可以手动输入，但是这可能也是后面JS中的一种响应式修改数据的需求吧
+      */
+    content: attr(data-text);
+  
+    /* 设置了绝对定位以后，元素默认为块元素 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0 20px;
+  
+    /* 然后在文字周围生成弥散度较高的阴影效果*/
+    /* 
+      将文字的颜色设置为与文字阴影相同的颜色，并且设置较高的模糊(blur)值：相当于
+      以文字和文字轮廓为参考，生成一个弥散的模糊光线效果
+    */
+    /* color: #0f0106; */
+    z-index: -1;
+    filter: blur(20px);
+  }
+  
+  .lighttext::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    /* 最后在文字底部和周围添加一层模糊的淡淡的环绕光 */
+    /* background-color: #9c7f86; */
+    opacity: 0.5;
+    filter: blur(10px);
+    z-index: -1;
+  }
+
+  .transparent-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    font-size: 6em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    mix-blend-mode: overlay;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .box {
+    position: relative;
+  
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px 10px;
+    margin : 0 auto;
+    width: 800px;
+  
+    transition: all 0.5s;
+  }
+  
+  .box h1 {
+    font-size: 24px;
+  
+    margin-bottom: 10px;
+  
+    transition: color 0.2s;
+  }
+  
+  .box p,.box img {
+    transition: color 0.2s;
+  }
+  .box::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;  
+    border: 1px solid transparent;
+    border-radius: 5px;
+    width: 0;
+    height: 0;
+    background-color: #41da55;
+    transform: translate(-50%, -50%);
+    transition: 0.25s;
+    content: "";
+  }
+  
+  .box:hover::before {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .box:hover {
+    border: 10px solid #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    transition-delay: 0.2s;
+  }
+  
+  .box:hover h1,
+  .box:hover p {
+    color: #fff;
+  }
+
+  .box img, .box .Video {
+    max-width: 100%;
+    height: auto;
+}

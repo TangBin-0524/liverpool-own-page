@@ -2,26 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Scrolling Timeline</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liverpool 4-3-3 Lineup</title>
     <link rel="stylesheet" href="tstyle.css">
 </head>
 <body>
-    <div class="timeline-container">
-        <!-- 年份标签 -->
-        <div class="year">1964</div>
-        <div class="year">1977</div>
-        <!-- 时间轴内容 -->
-        <div class="timeline-content">
-            <h2>Liverpool FC Founded</h2>
-            <p>Liverpool Football Club is founded by John Houlding.</p>
-            <img src="../image/birth.jpg" alt="Liverpool FC Founded">
+    <div class="lineup-container">
+        <h2>Liverpool FC 4-3-3 Lineup</h2>
+        <div class="formation" id="formation">
+            <!-- Goalkeeper -->
+            <div class="player goalkeeper" id="gk">
+                <img src="../image/alisson.webp" alt="Goalkeeper">
+            </div>
+            <!-- Defenders -->
+            <div class="player defender left" id="ld">
+                <img src="../image/robertson.webp" alt="Left Defender">
+            </div>
+            <div class="player defender center" id="cd1">
+                <img src="../image/virgil.webp" alt="Center Defender 1">
+            </div>
+            <div class="player defender center" id="cd2">
+                <img src="path/to/center-defender2.jpg" alt="Center Defender 2">
+            </div>
+            <div class="player defender right" id="rd">
+                <img src="path/to/right-defender.jpg" alt="Right Defender">
+            </div>
+            <!-- Midfielders -->
+            <div class="player midfielder left" id="lm">
+                <img src="path/to/left-midfielder.jpg" alt="Left Midfielder">
+            </div>
+            <div class="player midfielder center" id="cm">
+                <img src="path/to/center-midfielder.jpg" alt="Center Midfielder">
+            </div>
+            <div class="player midfielder right" id="rm">
+                <img src="path/to/right-midfielder.jpg" alt="Right Midfielder">
+            </div>
+            <!-- Forwards -->
+            <div class="player forward left" id="lf">
+                <img src="path/to/left-forward.jpg" alt="Left Forward">
+            </div>
+            <div class="player forward center" id="cf">
+                <img src="path/to/center-forward.jpg" alt="Center Forward">
+            </div>
+            <div class="player forward right" id="rf">
+                <img src="path/to/right-forward.jpg" alt="Right Forward">
+            </div>
         </div>
-        <div class="timeline-content">
-            <h2>First League Title</h2>
-            <p>Liverpool wins its first Football League title.</p>
-            <img src="../image/title.jpg" alt="First League Title">
-        </div>
-        <!-- 更多时间轴内容 -->
     </div>
 </body>
 </html>
